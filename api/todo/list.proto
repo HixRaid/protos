@@ -28,6 +28,7 @@ message SetList {
   string name = 2;
   string description = 3;
   int32 order = 4;
+  int32 user_id = 5;
 }
 
 message CreateRequest {
