@@ -23,16 +23,8 @@ message List {
   google.protobuf.Timestamp updated_at = 7;
 }
 
-message SetList {
-  int32 id = 1;
-  string name = 2;
-  string description = 3;
-  int32 order = 4;
-  int32 user_id = 5;
-}
-
 message CreateRequest {
-  SetList set_list = 1;
+  List set_list = 1;
 }
 
 message CreateResponse {
@@ -54,7 +46,7 @@ message GetAllResponse {
 }
 
 message UpdateRequest {
-  SetList set_list = 1;
+  List set_list = 1;
 }
 
 message UpdateResponse {
