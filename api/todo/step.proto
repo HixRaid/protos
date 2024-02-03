@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package todo;
+option go_package = "todo.task.v1;taskv1";
+
+import "google/protobuf/timestamp.proto";
+
+service StepService {
+  rpc Create(CreateRequest) returns (CreateResponse);
+  rpc Get(GetRequest) returns (GetResponse);
+  rpc GetAllByListId(GetAllRequest) returns (GetAllResponse);
+  rpc Update(UpdateRequest) returns (UpdateResponse);
+  rpc Delete(DeleteRequest) returns (DeleteResponse);
+}
+
+message Step {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  int32 order = 4;
+  int32 list_id = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
+message CreateRequest {
+  Step step = 1;
+}
+
+message CreateResponse {
+}
+
+message GetRequest {
+  int32 id = 1;
+}
+
+message GetResponse {
+  Step step = 1;
+}
+
+message GetAllRequest {
+  int32 list_id = 1;
+}
+
+message GetAllResponse {
+  repeated Step steps = 1;
+}
+
+message UpdateRequest {
+  Step step = 1;
+}
+
+message UpdateResponse {
+}
+
+message DeleteRequest {
+  int32 id = 1;
+}
+
+message DeleteResponse {
+}
