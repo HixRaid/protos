@@ -24,7 +24,7 @@ message List {
 }
 
 message CreateRequest {
-  List set_list = 1;
+  List list = 1;
 }
 
 message CreateResponse {
@@ -46,7 +46,7 @@ message GetAllResponse {
 }
 
 message UpdateRequest {
-  List set_list = 1;
+  List list = 1;
 }
 
 message UpdateResponse {
