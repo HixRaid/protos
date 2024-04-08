@@ -2,10 +2,12 @@
 
 This repository provides a place for version control and team collaboration on protobuf files.
 
-# 💡 Todo
+## 💡 Todo
 
-> Implementation [github.com/HixRaid/todo](https://github.com/HixRaid/todo)
+> Implementation [github.com/hixraid/todo](https://github.com/hixraid/todo)
 
-- list.proto
-- step.proto
-- task.proto
+### 🗂️ Files
+
+- [list.proto](api/todo/list.proto)
+- [step.proto](api/todo/step.proto)
+- [task.proto](api/todo/task.proto)
